@@ -1,0 +1,221 @@
+* {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(78, 75, 75);
+}
+
+.container {
+    padding: 0 10% 0 10%;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.arrow {
+    font-size: 1vw;
+    text-align: right;
+    margin: auto 1% auto auto;
+}
+
+@import '../navbar/style', '../footer/style';
+@import url('https://fonts.googleapis.com/css?family=Lobster+Two:400,700&display=swap');
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+
+    header {
+        #header-img {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 2.5%;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+    
+    main {
+        //display: grid;
+        /*grid-template-areas: 
+            'content-video content-video'
+            'content-collection content-collection'
+            'content-event content-event'
+            'content-shop content-shop'
+            'content-slider content-slider';*/
+        //margin-top: 5%;
+        padding-top: 5%;
+
+        #main-content-video {
+            grid-area: content-video;
+
+            h1, p {
+                text-align: center;
+            }
+
+            h1 {
+                font-family: 'Lobster Two', cursive;
+                font-weight: 700;
+                font-size: 4vw;
+                letter-spacing: 2px;
+                margin-top: 5%;
+            }
+
+            p {
+                font-size: 1.5vw;
+            }
+
+            video {
+                width: 100%;
+                margin-top: 10%;
+            }
+        }
+
+        #main-content-collection {
+            grid-area: content-collection;
+            display: grid;
+            grid-template-areas: 
+                'h1 h1'
+                'content-1 content-2';
+            column-gap: 3%;
+
+            h1 {
+                grid-area: h1;
+                font-size: 3vw;
+                margin-top: 10%;
+                margin-bottom: 10%;
+            }
+
+            #content-collection-1, #content-collection-2 {
+                h2 {
+                    font-size: 2vw;
+                }
+
+                p {
+                    font-size: 1.25vw;
+                }
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            #content-collection-1 {
+                grid-area: content-1;
+            }
+
+            #content-collection-2 {
+                grid-area: content-2;
+
+                h2 {
+                    margin-top: 0;
+                    margin-bottom: 0;
+                }
+
+                p {
+                    margin-bottom: 5%;
+                }
+            }
+        }
+
+        #main-content-event {
+            grid-area: content-event;
+            margin-top: 10%;
+
+            img {
+                width: 100%;
+            }
+        }
+    
+        #main-content-shop {
+            grid-area: content-shop;
+            display: grid;
+            grid-template-areas: 
+                'h1 h1'
+                'content-1 content-2';
+            gap: 3%;
+            
+            h1 {
+                grid-area: h1;
+                font-size: 3vw;
+                margin-top: 10%;
+                margin-bottom: 10%;
+            }
+
+            #content-shop-1, #content-shop-2 {
+                h2 {
+                    font-size: 2vw;
+                }
+
+                p {
+                    font-size: 1.25vw;
+                }
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            #content-shop-1 {
+                grid-area: content-1;
+                
+                h2 {
+                    margin-top: 0;
+                    margin-bottom: 0;
+                }
+            }
+
+            #content-shop-2 {
+                grid-area: content-2;
+            }
+        }
+    }
+
+    #main-content-slider {
+        background: #6e6464;
+        grid-area: content-slider;
+        margin-top: 12.5%;
+        padding: 5%;
+
+        h1, a {
+            color: white;
+        }
+
+        h1 {
+            font-size: 3vw;
+            font-weight: 500;
+            text-align: center;
+            letter-spacing: 5px;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        a {
+            text-decoration: underline;
+
+            div {
+                font-size: 1.5vw;
+                text-align: center;
+            }
+        }
+
+        .swiper-container {
+            padding-top: 5%;
+            padding-bottom: 5%;
+            
+            .swiper-wrapper {
+
+                .swiper-slide {
+                    width: 20%;
+                }
+            }
+        }
+    }
+}

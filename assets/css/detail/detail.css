@@ -1,0 +1,380 @@
+@import url("https://fonts.googleapis.com/css?family=Pacifico&display=swap");
+* {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: #4e4b4b;
+}
+
+.container {
+  padding: 0 10% 0 10%;
+}
+
+#navbar-fixed {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: white;
+  border-bottom: 1px solid #e0dede;
+  width: 100%;
+}
+
+#navbar-fixed #nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#navbar-fixed #nav .nav-item {
+  font-size: 1vw;
+  padding: 2.5% 5% 2.5% 05%;
+}
+
+#navbar-fixed #nav .nav-item a {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#navbar-fixed #nav .nav-item a:hover {
+  opacity: 0.3;
+}
+
+#navbar-fixed #nav #nav-logo a img {
+  margin-left: 25%;
+  width: 50%;
+}
+
+footer {
+  /*grid-template-areas: 
+        'content-about content-about'
+        'content-foot content-foot';*/
+  padding-top: 5%;
+}
+
+footer #footer-content-about {
+  grid-area: content-about;
+  opacity: 0.75;
+}
+
+footer #footer-content-about h2 {
+  font-family: 'Pacifico', cursive;
+  font-size: 2vw;
+  text-align: center;
+  margin-top: 0;
+}
+
+footer #footer-content-about p {
+  font-size: 1vw;
+  text-align: justify;
+}
+
+footer #footer-content-foot {
+  background: #E6E6E6;
+  grid-area: content-foot;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'content-account content-help content-company content-socialMedia' 'content-copyright content-copyright content-copyright content-copyright';
+  margin-top: 7.5%;
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+}
+
+footer #footer-content-foot .footer-navbar {
+  text-align: center;
+  color: #767676;
+}
+
+footer #footer-content-foot .footer-navbar h3 {
+  font-size: 1.5vw;
+}
+
+footer #footer-content-foot .footer-navbar ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer #footer-content-foot .footer-navbar ul li {
+  font-size: 1vw;
+  padding: 2%;
+}
+
+footer #footer-content-foot .footer-navbar ul li a {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+footer #footer-content-foot .footer-navbar ul li a:hover {
+  text-decoration: underline;
+}
+
+footer #footer-content-foot #content-account {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: content-account;
+}
+
+footer #footer-content-foot #content-help {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: content-help;
+}
+
+footer #footer-content-foot #content-company {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: content-company;
+}
+
+footer #footer-content-foot #content-socialMedia {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: content-socialMedia;
+}
+
+footer #footer-content-foot #content-socialMedia div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.5vw;
+}
+
+footer #footer-content-foot #content-socialMedia div a {
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+}
+
+footer #footer-content-foot #content-copyright {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: content-copyright;
+  text-align: center;
+  border-top: 1px solid #cccccc;
+  margin-top: 2.5%;
+  padding-top: 2.5%;
+}
+
+footer #footer-content-foot #content-copyright span {
+  font-size: 1vw;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+body main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 0.5fr 2fr 1.5fr;
+      grid-template-columns: 0.5fr 2fr 1.5fr;
+      grid-template-areas: 'page-navigation page-navigation page-navigation' 'side-img main-img catalog-desc';
+  row-gap: 2.5%;
+  -webkit-column-gap: 2.5%;
+          column-gap: 2.5%;
+  padding: 5% 10% 5% 10%;
+}
+
+body main #content-page-navigation {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: page-navigation;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1vw;
+  font-weight: 500;
+}
+
+body main #content-page-navigation a:hover {
+  text-decoration: underline;
+}
+
+body main #content-page-navigation span {
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+body main #content-side-img {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: side-img;
+}
+
+body main #content-side-img img {
+  width: 100%;
+}
+
+body main #content-side-img img:hover {
+  cursor: pointer;
+}
+
+body main #content-main-img {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: main-img;
+}
+
+body main #content-main-img img {
+  width: 100%;
+}
+
+body main #content-catalog-desc {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: catalog-desc;
+}
+
+body main #content-catalog-desc div:nth-child(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main #content-catalog-desc div:nth-child(1) h1 {
+  font-size: 1.5vw;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+body main #content-catalog-desc div:nth-child(1) span {
+  font-size: 1.25vw;
+}
+
+body main #content-catalog-desc div:nth-child(1) #catalog-color {
+  background-image: url("https://cdn.tobi.com/swatch_images/lime-stay-away-striped-bodysuit-swatch.jpg");
+  border-radius: 100%;
+  width: 3vw;
+  height: 3vw;
+  margin-top: 5%;
+}
+
+body main #content-catalog-desc div:nth-child(1) #catalog-size {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+  margin: 0;
+  margin-top: 5%;
+  padding: 0;
+}
+
+body main #content-catalog-desc div:nth-child(1) #catalog-size div {
+  padding: 0 10% 0 10%;
+}
+
+body main #content-catalog-desc div:nth-child(1) #catalog-size div li {
+  font-size: 1vw;
+  text-align: center;
+  line-height: 3vw;
+  width: 3vw;
+  height: 3vw;
+  margin: 0;
+}
+
+body main #content-catalog-desc div:nth-child(1) #catalog-size div li:hover {
+  cursor: pointer;
+}
+
+body main #content-catalog-desc div:nth-child(1) #add-to-bag {
+  background-color: #333;
+  color: white;
+  border: none;
+  font-size: 1vw;
+  letter-spacing: 0.15vw;
+  margin-top: 10%;
+  padding: 10% 25% 10% 25%;
+  white-space: nowrap;
+}
+
+body main #content-catalog-desc div:nth-child(1) #add-to-bag:hover {
+  cursor: pointer;
+  background-color: #111;
+}
+
+body main #content-catalog-desc div:nth-child(1) h3 {
+  font-size: 1vw;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-top: 7%;
+}
+
+body #similar-items {
+  grid-area: similar-items;
+  padding: 5% 10% 5% 10%;
+  position: relative;
+}
+
+body #similar-items h1 {
+  font-size: 1.5vw;
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin-left: -3%;
+}
+
+body #similar-items .swiper-container {
+  margin-top: 2.5%;
+}
+
+body #similar-items .swiper-container .swiper-slide {
+  padding-right: 1%;
+  padding-left: 1%;
+}
+
+body #similar-items .swiper-container .swiper-slide img {
+  width: 100%;
+}
+
+body #similar-items .swiper-container .swiper-slide a {
+  font-size: 0.90vw;
+}
+
+body #similar-items .swiper-container .swiper-slide a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+body #similar-items .swiper-container .swiper-slide a div {
+  text-align: center;
+}
+
+body #similar-items .swiper-button-prev, body #similar-items .swiper-button-next {
+  --swiper-navigation-size: 3vw;
+  position: absolute;
+  top: 50%;
+}
+
+body #similar-items .swiper-button-prev {
+  margin-left: 3%;
+}
+
+body #similar-items .swiper-button-next {
+  margin-right: 3%;
+}
+/*# sourceMappingURL=detail.css.map */

@@ -1,0 +1,43 @@
+#navbar-fixed {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: white;
+  border-bottom: 1px solid #e0dede;
+  width: 100%;
+}
+
+#navbar-fixed #nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#navbar-fixed #nav .nav-item {
+  font-size: 1vw;
+  padding: 2.5% 5% 2.5% 05%;
+}
+
+#navbar-fixed #nav .nav-item a {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#navbar-fixed #nav .nav-item a:hover {
+  opacity: 0.3;
+}
+
+#navbar-fixed #nav #nav-logo a img {
+  margin-left: 25%;
+  width: 50%;
+}
+/*# sourceMappingURL=style.css.map */

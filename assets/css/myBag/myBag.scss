@@ -1,0 +1,111 @@
+* {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(78, 75, 75);
+}
+
+.container {
+    padding: 0 10% 0 10%;
+}
+
+@import '../navbar/style', '../footer/style';
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr 0.5fr;
+        grid-template-areas: 
+        'title title'
+        'bag-item order-description';
+        column-gap: 2.5%;
+        padding: 5% 10% 5% 10%;
+
+        h3 {
+            grid-area: title;
+            font-weight: 700;
+            letter-spacing: 0.25vw;
+        }
+
+        #content-bag-item {
+            grid-area: bag-item;
+
+            .bag-item {
+                display: flex;
+                margin-bottom: 5%;
+
+                img {
+                    width: 20%;
+                }
+
+                .bag-item-description {
+                    margin-left: 2.5%;
+
+                    div {
+                        font-size: 1vw;
+                        padding: 2%;
+                    }
+
+                    button {
+                        background-color: #333;
+                        color: white;
+                        border: none;
+                        padding: 2.5% 15% 2.5% 15%;
+                        font-size: 1vw;
+                        letter-spacing: 0.15vw;
+
+                        &:hover {
+                            cursor: pointer;
+                            background-color: #111;
+                        }
+                    }
+                }
+            }
+        }
+
+        #content-order-description {
+            grid-area: order-description;
+            
+            #order-description-box {
+                border: 1px solid #111;
+                font-size: 1vw;
+
+                #order-description-header {
+                    background-color: #333;
+                    color: white;
+                    text-align: center;
+                    letter-spacing: 0.25vw;
+                    padding: 2.5%;
+                }
+
+                .order-description-text {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 1.5%;
+                }
+            }
+
+            button {
+                width: 100%;
+                background-color: #333;
+                color: white;
+                border: none;
+                margin-top: 5%;
+                padding: 2.5% 15% 2.5% 15%;
+                font-size: 1vw;
+                letter-spacing: 0.15vw;
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: #111;
+                }
+            }
+        }
+    }
+}

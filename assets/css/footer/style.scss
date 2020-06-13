@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+
+footer {
+    //display: grid;
+    /*grid-template-areas: 
+        'content-about content-about'
+        'content-foot content-foot';*/
+    //margin-top: 7.5%;
+    padding-top: 5%;
+    
+    #footer-content-about {
+        grid-area: content-about;
+        opacity: 0.75;
+
+        h2 {
+            font-family: 'Pacifico', cursive;
+            font-size: 2vw;
+            text-align: center;
+            margin-top: 0;
+        }
+        
+        p {
+            font-size: 1vw;
+            text-align: justify;
+        }
+    }
+
+    #footer-content-foot {
+        background: #E6E6E6;
+        grid-area: content-foot;
+        display: grid;
+        grid-template-areas:
+            'content-account content-help content-company content-socialMedia'
+            'content-copyright content-copyright content-copyright content-copyright';
+        margin-top: 7.5%;
+        padding-top: 2.5%;
+        padding-bottom: 2.5%;
+
+        .footer-navbar {
+            text-align: center;
+            color: #767676;
+            
+            h3 {
+                font-size: 1.5vw;
+            }
+
+            ul {
+                list-style: none;
+                padding: 0;
+
+                li { 
+                    font-size: 1vw;
+                    padding: 2%;
+
+                    a {
+                        transition: 0.3s;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+        
+        #content-account {
+            grid-area: content-account;
+        }
+
+        #content-help {
+            grid-area: content-help;
+        }
+
+        #content-company {
+            grid-area: content-company;
+        }
+
+        #content-socialMedia {
+            grid-area: content-socialMedia;
+
+            div {
+                display: flex;
+                justify-content: center;
+                font-size: 1.5vw;
+
+                a {
+                    padding-left: 2.5%;
+                    padding-right: 2.5%;
+                }
+            }
+        }
+
+        #content-copyright {
+            grid-area: content-copyright;
+            text-align: center;
+            border-top: 1px solid #cccccc;
+            margin-top: 2.5%;
+            padding-top: 2.5%;
+
+            span {
+                font-size: 1vw;
+            }
+        }
+    }
+}

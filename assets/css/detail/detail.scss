@@ -1,0 +1,205 @@
+* {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(78, 75, 75);
+}
+
+.container {
+    padding: 0 10% 0 10%;
+}
+
+@import '../navbar/style', '../footer/style';
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+
+    main {
+        display: grid;
+        grid-template-columns: 0.5fr 2fr 1.5fr;
+        grid-template-areas: 
+            'page-navigation page-navigation page-navigation'
+            'side-img main-img catalog-desc';
+        row-gap: 2.5%;
+        column-gap: 2.5%;
+        padding: 5% 10% 5% 10%;
+
+        #content-page-navigation {
+            grid-area: page-navigation;
+            display: flex;
+            font-size: 1vw;
+            font-weight: 500;
+            
+            a {
+                &:hover {
+                    text-decoration: underline;       
+                }
+            }
+
+            span {
+                margin-left: 1%;
+                margin-right: 1%;
+            }
+        }
+
+        #content-side-img {
+            grid-area: side-img;
+
+            img {
+                width: 100%;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        #content-main-img {
+            grid-area: main-img;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        #content-catalog-desc {
+            grid-area: catalog-desc;
+
+            div {
+                
+                &:nth-child(1) {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    h1 {
+                        font-size: 1.5vw;
+                        font-weight: 500;
+                        margin-bottom: 0;
+                    }
+                    
+                    span {
+                        font-size: 1.25vw;
+                    }
+
+                    #catalog-color {
+                        background-image: url('https://cdn.tobi.com/swatch_images/lime-stay-away-striped-bodysuit-swatch.jpg');
+                        border-radius: 100%;
+                        width: 3vw;
+                        height: 3vw;
+                        margin-top: 5%;
+                    }
+                    
+                    #catalog-size {
+                        display: flex;
+                        justify-content: center;
+                        list-style: none;
+                        //width: 100%;                        
+                        margin: 0;
+                        margin-top: 5%;
+                        padding: 0;
+
+                        div {
+                            padding: 0 10% 0 10%;
+
+                            li {
+                                font-size: 1vw;
+                                text-align: center;
+                                line-height: 3vw;
+                                width: 3vw;
+                                height: 3vw;
+                                margin: 0;
+
+                                &:hover {
+                                    cursor: pointer;
+                                    //border-radius: 100%;
+                                    //border: 1px solid #c0bcbc;
+                                }
+                            }
+                        }
+                    }
+
+                    #add-to-bag {
+                        background-color: #333;
+                        color: white;
+                        border: none;
+                        font-size: 1vw;
+                        letter-spacing: 0.15vw;
+                        margin-top: 10%;     
+                        padding: 10% 25% 10% 25%;
+                        white-space: nowrap;
+
+                        &:hover {
+                            cursor: pointer;
+                            background-color: #111;
+                        }
+                    }
+
+                    h3 {
+                        font-size: 1vw;
+                        letter-spacing: 1px;
+                        text-align: center;
+                        margin-top: 7%;
+                    }
+                }
+            }
+        }
+    }
+
+    #similar-items {
+        grid-area: similar-items;
+        padding: 5% 10% 5% 10%;
+        position: relative;
+        
+        h1 {
+            font-size: 1.5vw;
+            font-weight: 400;
+            letter-spacing: 2px;
+            margin-left: -3%;
+        }
+
+       .swiper-container {
+           margin-top: 2.5%;
+
+           .swiper-slide {
+               padding-right: 1%;
+               padding-left: 1%;
+
+               img {
+                   width: 100%;
+               }
+
+               a {
+                   font-size: 0.90vw;
+
+                    &:hover {
+                        cursor: pointer;
+                        text-decoration: underline;
+                    }
+
+                   div {
+                       text-align: center;
+                   }
+               }
+           }
+       }
+       
+        .swiper-button-prev, .swiper-button-next {
+        --swiper-navigation-size: 3vw;
+           position: absolute;
+           top: 50%;
+        }
+
+        .swiper-button-prev {
+            margin-left: 3%;
+        } 
+
+        .swiper-button-next {
+            margin-right: 3%;
+        }
+    }
+}
